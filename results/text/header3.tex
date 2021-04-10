@@ -1,0 +1,38 @@
+\usepackage{xcolor}
+\definecolor{ForestGreen} {HTML}{009B55}
+\definecolor{RawSienna} {HTML}{009B55}
+
+\def\HaskellTypeclassColor\PYG{k+kt}
+\def\HaskellCommentColor\PYG{c+c1}
+% TODO: https://tex.stackexchange.com/questions/4198/emphasize-word-beginning-with-uppercase-letters-in-code-with-lstlisting-package
+\lstdefinelanguage{haskell}{
+basicstyle=\large\ttfamily,   % Вот тут надо стиль ставить, а не у идентификаторов
+identifierstyle=\ttfamily,
+commentstyle=\HaskellCommentColor\itshape\HaskellCommentColor,
+sensitive=true,
+%
+classoffset=0
+ , keywords={where, let, in, when, class, type, data, of, do, as, val, inherit, module, sig, deriving, if, then, else, import , assert, true, false, end}
+ , keywordstyle=\ttfamily\bfseries\color{ForestGreen} %\underbar
+, classoffset=1
+ , morekeywords={pure,empty,select,branch,oneOf}
+ , keywordstyle=\color{RawSienna},
+classoffset=2
+ , morekeywords={Monad,Applicative,Selective,String
+     ,Either,Left,Right
+     ,Maybe,Some,None
+     }
+ , keywordstyle=\PYG{k+kt}
+, classoffset=0
+%keywordstyle=[2]{\color{orange}},
+, otherkeywords={::,<$>, >?>}
+%identifierstyle=\fontfamily{cmtt}\selectfont\ttfamily,
+%basewidth={0.5em,0.5em},
+, columns=fixed
+%fontadjust=true,
+%literate={->}{{$\to$}}3 {===}{{$\equiv$}}1 {=/=}{{$\not\equiv$}}1 {|>}{{$\triangleright$}}3 {\\/}{{$\vee$}}2 {/\\}{{$\wedge$}}2 {>=}{{$\ge$}}1 {<=}{{$\le$}} 1,
+%morecomment=[s]{(*}{*)}
+, literate={\$}{{\textcolor{blue}{\$}}}1
+, literate={<\$>}{{\textcolor{RawSienna}{\ <\$>\ } }}1
+           {>?>}{{\textcolor{RawSienna}{\ >?>\ } }}1
+}

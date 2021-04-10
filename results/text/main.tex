@@ -1,11 +1,25 @@
 \input{header.tex}
 \input{header2.tex}
+\input{header3.tex}
 
 \usepackage{caption}
 \usepackage{listings}
 \usepackage{comment}
 
+\newcommand{\TODO}[1]{\textcolor{red}{#1}}
+
+\newcommand{\OCaml}{\textsc{OCaml}}
+\newcommand{\Haskell}{\textsc{Haskell}}
+\newcommand{\Scala}{\textsc{Scala}}
+\newcommand{\Javascript}{\textsc{Javascript}}
+\newcommand{\Bucklescript}{\textsc{Bucklescript}}
+\newcommand{\ReasonML}{\textsc{ReasonML}}
 \newcommand{\ReScript}{\textsc{ReScript}}
+\newcommand{\Jsoo}{\textsc{Js\_of\_ocaml}}
+\newcommand{\Kotlin}{\textsc{Kotlin}}
+\newcommand{\GCC}{\textsc{GCC}}
+\newcommand{\Parsec}{\textsc{Parsec}}
+\newcommand{\JSON}{\textsc{JSON}}
 
 \DeclareCaptionFont{white}{ \color{white} }
 \DeclareCaptionFormat{listing}{
@@ -26,6 +40,12 @@
 \label{sec:intro}
 \input{01_intro.tex}
 
+
+\section{Обзор}
+\label{sec:overview}
+\input{09_overview.tex}
+
+
 \section{Постановка задачи}
 \label{sec:task}
 \input{10_task.tex}
@@ -38,7 +58,13 @@
 \label{sec:approach}
 \input{12_approach.tex}
 
-\section{Заключение}
+
+\section{Эксперименты}
+\label{sec:experiments}
+\input{18_experiments.tex}
+
+
+\section{Результаты}
 \label{sec:conclusion}
 \input{20_conclusion.tex}
 
